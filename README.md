@@ -135,41 +135,41 @@ Actual interface screenshots, reviewed and redacted for this portfolio:
 
 ## How the spreadsheet-backed setup works
 
-Google Sheets stores launcher settings and run history. The examples below show field structure only and use fictional values.
+Google Sheets stores launcher settings and run history. The tables below use **conceptual labels, not the workbook's actual column names or schema**; all sample values are fictional.
 
 ### Process catalog
 
-| OC Folder | ProcessName | URL *(fictional placeholder)* | DisplayMsg |
+| Process group | Process shown to user | Launch setup | User guidance |
 |---|---|---|---|
-| `Demo_Group_A` | `Demo_Process_Alpha` | `[redacted launch URL]` | Enter a reference ID before starting this process. |
-| `Demo_Group_B` | `Demo_Process_Beta` | `[redacted launch URL]` | Select a run date if needed. |
+| Demo Group A | Demo Process A | Configured destination | Enter a reference number before starting. |
+| Demo Group B | Demo Process B | Configured destination | Select a run date if needed. |
 
 The catalog controls which processes appear and what guidance users see.
 
 ### User-to-process permissions
 
-| OC Folder | ProcessName | Email *(fictional)* |
+| Process group | Process | Authorized user *(fictional)* |
 |---|---|---|
-| `Demo_Group_A` | `Demo_Process_Alpha` | `alex@example.test` |
-| `Demo_Group_B` | `Demo_Process_Beta` | `jordan@example.test` |
+| Demo Group A | Demo Process A | Alex Example |
+| Demo Group B | Demo Process B | Jordan Example |
 
 Only listed user/process pairs can launch; this configuration complements platform-side permissions.
 
 ### Process-specific argument definitions
 
-| Process | Argument *(shown to user)* | OC Arg Name *(mapped parameter)* | Required |
+| Process | Input shown to user | Corresponding process input | Required? |
 |---|---|---|---|
-| `Demo_Process_Alpha` | `Reference ID` | `input_reference_id` | Yes |
-| `Demo_Process_Beta` | `Run date (YYYY-MM-DD)` | `input_run_date` | No |
+| Demo Process A | Reference number | Reference number input | Yes |
+| Demo Process B | Run date | Process date input | No |
 
 User-facing labels map to the parameter names expected by each process.
 
 ### Execution history
 
-| Timestamp | Process *(fictional)* | Status | Example input |
+| Submitted at | Process *(fictional)* | Current status | Example input |
 |---|---|---|---|
-| 2026-10-30 09:15 | `Demo_Process_Alpha` | ✅ Completed | `Reference ID: REF-2048` |
-| 2026-10-30 09:42 | `Demo_Process_Beta` | 🔵 Running | `Run date: 2026-10-30` |
+| 2026-10-30 09:15 | Demo Process A | ✅ Completed | Reference number: 2048 |
+| 2026-10-30 09:42 | Demo Process B | 🔵 Running | Run date: 2026-10-30 |
 
 The history links each launch to its outcome; it is an operational record, not a replacement for an enterprise database or audit platform.
 
