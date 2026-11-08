@@ -134,9 +134,14 @@ AI-generated conceptual UI mockups for this portfolio. They are illustrative exa
 
 ![AI-generated launcher mockup showing a timestamp, email, the process options Demo_Process_A, Mock_Automation_Process_01, and Mock_Automation_Process_02, plus a reference number input](1.execute_screenshot_genByAI.png)
 
+- **Authorized process selection:** In the intended design, users sign in through organization-approved SSO and see only the processes they are authorized to run; processes they cannot access are not shown. This describes a general access-control behavior, not the underlying policy or implementation.
+- **Process-specific inputs and request details:** Selecting a process determines whether input fields are shown and which fields are relevant. The job record would use the authenticated account for identity and a system-generated timestamp for submission time. These are conceptual design intentions, not implemented features.
+
 ### Follow execution status
 
 ![AI-generated execution-history mockup showing Demo_Process_A, Mock_Automation_Process_01, and Mock_Automation_Process_02 with example statuses](2.job_live_tracking_screenshot_genByAI.png)
+
+- **Status visibility:** After submission, users can follow the job's status as it moves through the lifecycle shown above. This view is for status updates only; it does not offer controls to stop a run or inspect execution logs. Those operational capabilities would remain in appropriately governed platform tooling. This is a conceptual experience, not a description of a live system.
 
 ## Conceptual data model
 
